@@ -6,7 +6,7 @@ Este é um sistema de adoção de animais desenvolvido com Laravel. Ele permite 
 
 Antes de executar o projeto, certifique-se de que sua máquina atenda aos seguintes requisitos:
 
-- **PHP 8.x**: Linguagem de programação necessária para rodar o Laravel.
+- **PHP 8.3**: Linguagem de programação necessária para rodar o Laravel.
 - **Composer**: Gerenciador de dependências do PHP.
 - **Docker**: Plataforma para desenvolvimento e execução de aplicações em containers.
 
