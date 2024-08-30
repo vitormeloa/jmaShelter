@@ -22,8 +22,8 @@ class AcompanhamentoFactory extends Factory
         return [
             'adocao_id' => Adocao::factory(),
             'data_visita' => $this->faker->date(),
-            'avaliacao_saude' => $this->faker->sentence,
-            'observacoes' => $this->faker->paragraph,
+            'avaliacao_saude' => $this->faker->randomElement(['Excelente', 'Bom', 'Regular', 'Ruim']),
+            'observacoes' => $this->faker->randomElement(['Excelente', 'Bom', 'Regular', 'Ruim']),
             'avaliacao_relacionamento' => $this->faker->randomElement(['Excelente', 'Bom', 'Regular', 'Ruim']),
         ];
     }
