@@ -30,6 +30,11 @@
                     <x-nav-link :href="route('adocoes.index')" :active="request()->routeIs('adocoes.*')">
                         {{ __('Adoções') }}
                     </x-nav-link>
+
+                    <!-- Link para Acompanhamentos -->
+                    <x-nav-link :href="route('acompanhamentos.index')" :active="request()->routeIs('acompanhamentos.*')">
+                        {{ __('Acompanhamentos') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -94,6 +99,16 @@
             <!-- Link para Adotantes -->
             <x-responsive-nav-link :href="route('adotantes.index')" :active="request()->routeIs('adotantes.*')">
                 {{ __('Adotantes') }}
+            </x-responsive-nav-link>
+
+            <!-- Link para Adoções -->
+            <x-responsive-nav-link :href="route('adocoes.index')" :active="request()->routeIs('adocoes.*')">
+                {{ __('Adoções') }}
+            </x-responsive-nav-link>
+
+            <!-- Link para Acompanhamento -->
+            <x-responsive-nav-link :href="route('acompanhamentos.index')" :active="request()->routeIs('acompanhamentos.*')">
+                {{ __('Acompanhamentos') }}
             </x-responsive-nav-link>
         </div>
 

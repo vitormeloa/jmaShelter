@@ -37,9 +37,11 @@ class AnimalController extends Controller
             ->with('success', 'Animal criado com sucesso.');
     }
 
-    public function show(Animal $animal)
+    public function show($animal)
     {
-//        return view('animais.show', compact('animal'));
+        $animal = Animal::findOrFail($animal);
+
+        return view('animais.show', compact('animal'));
     }
 
     public function edit($animal)

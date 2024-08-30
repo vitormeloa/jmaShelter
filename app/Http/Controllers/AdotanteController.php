@@ -35,9 +35,11 @@ class AdotanteController extends Controller
             ->with('success', 'Adotante criado com sucesso.');
     }
 
-    public function show(Adotante $adotante)
+    public function show($adotante)
     {
-//        return view('adotantes.show', compact('adotante'));
+        $adotante = Adotante::findOrFail($adotante);
+
+        return view('adotantes.show', compact('adotante'));
     }
 
     public function edit(Adotante $adotante)

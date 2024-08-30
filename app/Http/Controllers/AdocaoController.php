@@ -22,6 +22,13 @@ class AdocaoController extends Controller
         return view('adocoes.create', compact('animais', 'adotantes'));
     }
 
+    public function show($adocao)
+    {
+        $adocao = Adocao::with(['animal', 'adotante'])->findOrFail($adocao);
+
+        return view('adocoes.show', compact('adocao'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
